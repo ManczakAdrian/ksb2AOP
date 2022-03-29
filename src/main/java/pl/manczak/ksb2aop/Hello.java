@@ -10,6 +10,7 @@ public class Hello {
 
     @EventListener(ApplicationReadyEvent.class)
     //Event Listener uruchamia aplikację na samym starcie
+    @Aspect
     public String sayHello() {
 
         System.out.println("hello");

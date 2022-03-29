@@ -13,20 +13,20 @@ import org.springframework.stereotype.Component;
 public class HelloAspect {
 
 
-    @Around("execution(String pl.manczak.ksb2aop.Hello.sayHello())")
-    private void aroundHello(ProceedingJoinPoint joinPoint) throws Throwable{
-        System.out.println("aroundHello");
-        joinPoint.proceed();
-
-    }
-    @Before("execution(String pl.manczak.ksb2aop.Hello.sayHello())")
+//    @Around("@annotation(Aspect)")
+//    private void aroundHello(ProceedingJoinPoint joinPoint) throws Throwable{
+//        System.out.println("aroundHello");
+//        joinPoint.proceed();
+//
+//    }
+    @Before("@annotation(Aspect)")
     private void beforeHello(){
         System.out.println("beforeHello");
     }
-    @After("execution(String pl.manczak.ksb2aop.Hello.sayHello())")
-    private void afterHello(){
-        System.out.println("afterHello");
-    }
+//    @After("execution(String pl.manczak.ksb2aop.Hello.sayHello())")
+//    private void afterHello(){
+//        System.out.println("afterHello");
+//    }
 
 
 
